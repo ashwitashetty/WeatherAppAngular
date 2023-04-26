@@ -1,0 +1,36 @@
+<div>
+    <div class="favourite-container" *ngIf="getfavlist===null || getfavlist?.length<1">
+        <div class="no-fvt-img">
+            <img src="../../assets/images/icon_nothing.png" alt="" />
+        </div>
+        <div class="no-fvt-text">
+            <p class="No-favourite-added">No Favourites added</p>
+        </div>
+    </div>
+    <div class="favlist-section" *ngIf="getfavlist.length>=1">
+        <div class="city-remove-header-section">
+            <div>{{getfavlist.length}} City added as favourite</div>
+            <div>Remove All</div>
+        </div>
+        <div class="card-container">
+            <div class="card-place" [ngClass]="color" (mouseover)="color='yellow'" (mouseout)="color='red'">Udupi,
+                Karnataka</div>
+            <div class="card-heart-content">
+                <div class="card-main-content">
+                    <img src="../../assets/images/icon_mostly_sunny.png" alt="weather_icon" class="weather-icon" />
+                    <div class="degree-celius">
+                        <p class="degree">32</p>
+                        <p class="unit">°c</p>
+                    </div>
+                    <p class="description">Mostly Sunny</p>
+                </div>
+                <img src="../../assets/images/icon_favourite.png" alt="favourite" class="fav_icon" />
+                <!-- <img
+                src="/..../assets/images/icon_favourite_Active.png"
+                alt="favourite"
+                class="fav_icon"
+              /> -->
+            </div>
+        </div>
+    </div>
+</div>

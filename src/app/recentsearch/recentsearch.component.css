@@ -1,0 +1,132 @@
+.recentsearch-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+  }
+  
+  .no-recent-text {
+    margin-top: 2%;
+    color: #ffffff;
+    font-family: Roboto Regular;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 21px;
+  }
+  .city-remove-header-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2%;
+    color: #ffffff;
+    font-family: Roboto Regular;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 15px;
+    text-align: right;
+    margin-bottom: 1%;
+  }
+  .favlist-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-container {
+    height: 73px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+    margin-top: 20px;
+  }
+  .card-container:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .card-main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    min-width: 260px;
+  }
+  .card-heart-content {
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .weather-icon {
+    height: 38px;
+    width: 36px;
+  }
+  .fav_icon {
+    height: 17px;
+    width: 18px;
+    margin-right: 20px;
+  }
+  
+  .card-place {
+    height: 19px;
+    width: 154px;
+    color: #ffffff;
+    font-family: Roboto Regular;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 19px;
+    margin-left: 20px;
+  }
+  .card-place:hover {
+    height: 19px;
+    width: 154px;
+    color: #ffe539;
+    font-family: Roboto Regular;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 19px;
+    margin-left: 20px;
+  }
+  .degree-celius {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .degree {
+    height: 38px;
+    color: #ffffff;
+    font-family: Roboto Regular;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 38px;
+  }
+  .unit {
+    height: 19px;
+    width: 11px;
+    color: #ffffff;
+    font-style: normal;
+    font-family: Roboto Light;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 19px;
+    margin-top: 30px;
+    padding-left: 5px;
+  }
+  .description {
+    height: 21px;
+    width: auto;
+    color: #ffffff;
+    font-family: Roboto Light;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 21px;
+  }
+  

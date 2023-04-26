@@ -1,0 +1,95 @@
+<div class="home-container">
+    <p class="city-name">{{ weatherDetails?.location?.name }},
+        {{ weatherDetails.location?.region }}</p>
+    <div class="add-to-fav-container">
+        <img src="../../assets/images/icon_favourite.png" alt="fav-icon" class="fav-icon">
+        <p class="add-to-fav-text">Add to favourite</p>
+    </div>
+    <div class="home-content-container">
+        <img src="https:{{ weatherDetails?.current?.condition.icon }}" alt="temp-icon" class="temp-icon">
+        <div class="cel-far-btn-div">
+            <div *ngIf="celcius===true && fahren===false" class="temp-cel">{{ weatherDetails?.current?.temp_c }}</div>
+            <div *ngIf="celcius===false && fahren===true" class="temp-cel">{{ weatherDetails?.current?.temp_f }}</div>
+
+            <div id="btn">
+                <button class="switch" (click)="handleToggle('active')" [ngClass]="active">°C</button>
+                <button class="switch" (click)="handleToggle('active1')" [ngClass]="active1">°F</button>
+            </div>
+        </div>
+        <!-- <div *ngIf="temp === 'Fahreneit'" class="tempdiv">
+            <div class="notext">{{ weatherDetails?.current?.temp_f }}</div>
+            <div class="tempdiv1">
+              <div class="tempdiv2" (click)="toggletemp('Celcius')">
+                <p class="temptext1">°</p>
+                <p class="temptext2">C</p>
+              </div>
+              <div class="tempdiv3">
+                <div class="tempdiv4">
+                  <p class="temptext3">°</p>
+                  <p class="temptext4">F</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div *ngIf="temp === 'Celcius'" class="tempdiv">
+            <div class="notext">{{ weatherDetails?.current?.temp_c }}</div>
+            <div class="tempdiv1">
+              <div class="tempdiv3">
+                <div class="tempdiv4">
+                  <p class="temptext3">o</p>
+                  <p class="temptext4">C</p>
+                </div>
+              </div>
+              <div class="tempdiv2" (click)="toggletemp('Fahreneit')">
+                <p class="temptext1">o</p>
+                <p class="temptext2">F</p>
+              </div>
+            </div>
+          </div> -->
+    </div>
+    <p class="temp-description">{{ weatherDetails?.current?.condition?.text }}</p>
+</div>
+
+<div class="line"></div>
+<div class="temp-details-container">
+    <div class="individual-temp-detail">
+        <img src="../assets/images/icon_temperature_info.png" class="thermo" alt="logo" />
+        <div class="temp-desc">
+            <p class="actual-entity">Min-Max</p>
+            <p class="actual-value">
+                {{ weatherDetails?.current?.temp_c }}°-{{
+                weatherDetails?.current?.temp_c
+                }}°
+            </p>
+        </div>
+    </div>
+    <div class="individual-temp-detail">
+        <img src="../assets/images/icon_precipitation_info.png" class="precipitation" alt="logo" />
+        <div class="temp-desc">
+            <p class="actual-entity">Precipitation</p>
+            <p class="actual-value">{{ weatherDetails.current?.precip_mm }}%</p>
+        </div>
+    </div>
+    <div class="individual-temp-detail">
+        <img src="../assets/images/icon_humidity_info.png" class="humidity" alt="logo" />
+        <div class="temp-desc">
+            <p class="actual-entity">Humidity</p>
+            <p class="actual-value">{{ weatherDetails.current?.humidity }}%</p>
+        </div>
+    </div>
+    <div class="individual-temp-detail">
+        <img src="../assets/images/icon_wind_info.png" class="wind" alt="logo" />
+        <div class="temp-desc">
+            <p class="actual-entity">Wind</p>
+            <p class="actual-value">{{ weatherDetails.current?.wind_mph }} mph</p>
+        </div>
+    </div>
+    <div class="individual-temp-detail">
+        <img src="../assets/images/icon_visibility_info.png" class="visibility" alt="logo" />
+        <div class="temp-desc">
+            <p class="actual-entity">Visibility</p>
+            <p class="actual-value">{{ weatherDetails.current?.vis_miles }} mph</p>
+        </div>
+    </div>
+</div>
